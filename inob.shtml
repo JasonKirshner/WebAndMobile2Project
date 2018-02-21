@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>In-N-Out</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/proj.css">
+		<!-- Clock Script -->
+		<script>
+		function startTime() {
+			var today = new Date();
+			var h = today.getHours();
+			var m = today.getMinutes();
+			var s = today.getSeconds();
+			m = checkTime(m);
+			s = checkTime(s);
+			document.getElementById('txt').innerHTML =
+			h + ":" + m + ":" + s;
+			var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+			if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+			return i;
+		}
+		</script>
+	</head>
+	<!-- Starts Clock Script and is location for top of webpage -->
+	<body onload = "startTime()" id = "backToTop">
+	<div class = "clock" id = "txt"></div>
+	<!--#include file = "includes/nav.html" -->
+	<div class = "content">
+		<h1>In-N-Out</h1>
+		<div class = "home">
+			<img src = "images/inob.jpg" alt = "in n out"><br/>From: <a href = "http://www.whatupwilly.com/2006/01/in-n-out-100x100.html">whatupwilly.com</a></img>
+		</div>
+		<div class = "text">
+			There's no doubt that In-N-Out is the most craved fast food restaraunt in San Diego. If you live in San Diego
+			and have not had In-N-Out, then obviously you have never lived before. With it's 3 item fully <b>customizable</b> menu,
+			you are sure to have the best burger of your life. Unlike any other burger joint, In-N-Out lets you use as many patties
+			and slices of cheese as you want using there (Patty x Cheese) system. The photo above is a rare site of the unheard of
+			100 x 100 burger. In-N-Out is the raining king of fast-food in San Diego.
+		</div>
+		<div class = "path">
+			<a href = "index.shtml">Home</a> > <a href = "food.shtml">Food</a> > <a href = "inob.shtml">In-N-Out</a>
+		</div>
+		<a href = "#backToTop">Back To Top</a>
+	</div>
+	</body>
+</html>

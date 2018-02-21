@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Home Page</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/proj.css">
+		<!-- Clock Script -->
+		<script>
+		function startTime() {
+			var today = new Date();
+			var h = today.getHours();
+			var m = today.getMinutes();
+			var s = today.getSeconds();
+			m = checkTime(m);
+			s = checkTime(s);
+			document.getElementById('txt').innerHTML =
+			h + ":" + m + ":" + s;
+			var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+			if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+			return i;
+		}
+		</script>
+	</head>
+	<!-- Starts Clock Script and is location for top of webpage -->
+	<body onload = "startTime()" id = "backToTop">
+	<div class = "clock" id = "txt"></div>
+	<!-- SSI for the nav bar -->
+	
+	<!--#include file = "includes/nav.html" -->
+	
+	<!-- Content of the webpage -->
+	<div class = "content">
+		<!-- Title of the current page -->
+		<h1>City of Sunny San Diego</h1>
+		<!-- Image(s) -->
+		<div class = "home">
+			<img src = "images/image2.JPG" alt = "Coronado"></img>
+		</div>
+		<!-- About the webpage -->
+		<div class = "text">
+			San Diego encompasses 18 incorporated cities including Coronado, La Jolla, Del Mar,
+			and Little Italy just to name a few. San Diego is mostly know for it's ideal climate and
+			beautiful beaches which span up to 70 miles along the pacific coast. San Diego offers 
+			a vast array of things to do and see, which makes it a perfect location to spend your summer vacation.
+		</div>
+		<!-- Image of location of San Diego -->
+		<div class = "location">
+			<img src = "images/sdmap.gif" alt = "Map of SD"><br/>From: <a href = "http://www.carolmendelmaps.com/mapsd/">carolmendelmaps.com</a></img>
+		</div>
+		<!-- Back to top button -->
+		<a href = "#backToTop">Back To Top</a>
+	</div>
+	</body>
+</html>

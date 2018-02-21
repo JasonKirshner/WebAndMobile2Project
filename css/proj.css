@@ -1,0 +1,210 @@
+/* Applying background to the entire body */
+body {
+    width: 100%;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/image7.JPG');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+/* For the clock at the top of each website */
+.clock {
+	text-align: center;
+	background-color: #BBDEFB;
+	margin: 0;
+	padding: 0;
+}
+
+/* Design of the nav used in the SSI */
+.nav {
+	background-color: #BBDEFB;
+	text-align: center;
+	list-style: none;
+	padding: 5px 0 2px 0;
+	margin: 0;
+}
+
+/* For the entire list on the nav */
+.nav ul {
+	font-family: 'Fira Sans', sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+/* For each list item in the nav */
+.nav ul li {
+	display: inline-block;
+	padding-right: 20px;
+	list-style-type: none;
+}
+
+/* For each link in the nav */
+.nav ul li a {
+	color: #1976D2;
+	text-decoration: none;
+}
+
+/* For the hovering of the link in the nav */
+.nav ul li a:hover {
+	color: #448AFF;
+}
+
+/* Layout of the container div for the content of each webpage */
+.content {
+	position: absolute;
+	background-color: yellow;
+	background-color: rgba(255,255,0,.7);
+	border: 5px solid #BDBDBD;
+	border-radius: 15px;
+	width: 50%;
+	top: 12%;
+	left: 25%;
+}
+
+/* For the Header of all Pages */
+.content h1 {
+	font-family: Georgia, serif;
+	text-align: center;
+	margin: 0;
+}
+
+/* Used for the map div in the index.shtml */
+.location {
+	position: relative;
+	margin-top: 40px;
+	margin-left: 45px;
+	margin-bottom: 40px;
+	width: 50%;
+	height: 30%;
+}
+
+/* For the image in the map div in index.shtml */
+.location img {
+	border-style: solid;
+	width: 90%;
+	height: 100%;
+}
+
+/* For the path of every webpage */
+.path {
+	font-family: "Times New Roman", Georgia, Serif;
+	clear: both;
+	margin: 0;
+}
+
+/* For the div on the left of food.shtml */
+.food1 {
+	position: relative;
+	display: inline-block;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 40px;
+	width: 46%;
+	height: 50%;
+	float: left;
+}
+
+/* For the image in the div on the left of food.shtml */
+.food1 img {
+	border-style: solid;
+	height: 500px;
+	width: 100%;
+}
+
+/* For the div on the right of food.shtml */
+.food2 {
+	position: relative;
+	display: inline-block;
+	margin-top: 5px;
+	margin-right: 10px;
+	margin-bottom: 40px;
+	width: 46%;
+	height: 60%;
+	float: right;
+}
+
+/* For the image in the div on the right of food.shtml */
+.food2 img {
+	border-style: solid;
+	height: 500px;
+	width: 100%
+}
+
+/* For a div the reaches across the entire content div and holds an image */
+.home {
+	position: relative;
+	margin-top: 5px;
+	margin-left: 45px;
+	margin-bottom: 40px;
+	width: 100%;
+	height: 50%;
+}
+
+/* Referring to image inside home div */
+.home img {
+	border-style: solid;
+	width: 90%;
+	height: 100%;
+}
+
+/* For all text that is inside the content div */
+.text {
+	clear: both;
+	position: relative;
+	background-color: #BDBDBD;
+	width: 100%;
+	line-height: 25px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* For all links in the text div */
+.text a {
+	text-decoration: none;
+}
+
+/* Redesigns each webpage to fit on a mobile device that is smaller than 1440px in width */
+@media screen and (max-width: 1400px)
+{
+	.home {
+	position: relative;
+	margin-top: 5px;
+	margin-left: 10px;
+	margin-bottom: 40px;
+	width: 100%;
+	height: 50%;
+}
+	.food1 {
+	position: relative;
+	display: inline-block;
+	margin-top: 5px;
+	margin-bottom: 40px;
+	width: 100%;
+	height: 50%;
+	float: left;
+}
+
+	.food1 img {
+	border-style: solid;
+	height: 150px;
+	width: 92%;
+}
+	
+	.food2 {
+	position: relative;
+	display: inline-block;
+	margin-top: 5px;
+	margin-left: 2px;
+	margin-bottom: 40px;
+	width: 100%;
+	height: 60%;
+	float: left;
+}
+
+.food2 img {
+	border-style: solid;
+	height: 150px;
+	width: 95%
+}
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>San Diego County Fair</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/proj.css">
+		<!-- Clock Script -->
+		<script>
+		function startTime() {
+			var today = new Date();
+			var h = today.getHours();
+			var m = today.getMinutes();
+			var s = today.getSeconds();
+			m = checkTime(m);
+			s = checkTime(s);
+			document.getElementById('txt').innerHTML =
+			h + ":" + m + ":" + s;
+			var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+			if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+			return i;
+		}
+		</script>
+	</head>
+	<!-- Starts Clock Script and is location for top of webpage -->
+	<body onload = "startTime()">
+	<div class = "clock" id = "txt"></div>
+	<!--#include file = "includes/nav.html" -->
+	<div class = "content">
+		<h1>San Diego County Fair</h1>
+		<div class = "home">
+			<img src = "images/sdcf.jpeg"><br/>From: <a href = "http://www.sandiegomagazine.com/San-Diego-Magazine/June-2015/Exploring-Beautiful-Balboa-Park/San-Diego-County-Fair/">sandiegomagazine.com</a></img>
+		</div>
+		<div class = "text">
+			The San Diego County Fair is not a fair to be missed if you're a local. The fair is the
+			perfect kick-off to the summer by providing both thrill seeking rides and unheatlthy foods.
+			The County fair hosts many of the craziest food vendors San Diego has to offer, delivering 
+			foods such as french toast bacon and deep fried nachos. But be cautious when deciding to go on
+			a ride right after you've eaten, the two definitely don't mix well. The county fair by the beach
+			is one of the best attractions that will keep you entertained the entire day. Don't forget to
+			Put on sunscreen!
+		</div>
+		<div class = "path">
+			<a href = "index.shtml">Home</a> > <a href = "attractions.shtml">Attractions</a> > <a href = "sdcf.shtml">San Diego County Fair</a>
+		</div>
+	</div>
+	</body>
+</html>

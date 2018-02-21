@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Grade</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/proj.css">
+		<script>
+		<!-- Clock Script -->
+		function startTime() {
+			var today = new Date();
+			var h = today.getHours();
+			var m = today.getMinutes();
+			var s = today.getSeconds();
+			m = checkTime(m);
+			s = checkTime(s);
+			document.getElementById('txt').innerHTML =
+			h + ":" + m + ":" + s;
+			var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+			if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+			return i;
+		}
+		</script>
+	</head>
+	<!-- Starts Clock Script and is location for top of webpage -->
+	<body onload = "startTime()">
+	<div class = "clock" id = "txt"></div>
+	<!--#include file = "includes/nav.html" -->
+	<div class = "content">
+		<h1>Design of the UI</h1>
+		
+		<div class = "text">
+			✔ It isobvious to a site visitor that all pages are part of the same site.<br/>
+			✔ Good use of Contrast, Repetition, Alignment, and Proximity Principles.<br/>
+			✔ Site title, logo, formatting (page title, content, navigation) are the same on all pages.<br/>
+			✔ The global navigation system isaccessible on all pages. In other words, a site visitor isable to jump to any top-level page from any other page within the site.</br>
+			✔ The visitor always knows where they are in the site, and what to do to go ‘home’.<br/>
+			✔ The siteiseasy to navigate –both between pages and within pages.<br/>
+			✔ Long content has a ‘go to top’ link.<br/>
+			✔ Page titles (title tags) reflect the actual content of the page.<br/>
+			✔ A modernColor Scheme is used and it is appropriate to the place <br/>
+			✔ Font Family is appropriate to the site and several different fonts are used for interest<br/>
+			✔ Pages demonstrate a variety of layouts to keep the users’ interest<br/>
+			✔ Images for viewing on smaller devices are appropriateto the screen size
+		</div>
+		
+		<h1>Structure</h1>
+		<div class = "text">
+			✔ Any repeated HTML code is contained in an SSI and not coded throughout the site<br/>
+			✔ Code your style in only ONE css file<br/>
+			✔ All style is contained in the external css file –no inline or embedded cssunless justified with comments<br/>
+			✔ A framework CSS file includes your grid layout and color scheme and other css that you will likely use in future websites.<br/>
+			✔ Media queries are used so users can view your site on smaller mobile devices.<br/>
+			✔ HTML code is readable, indented, whitespaced, and commented<br/>
+			✔ CSS code is readable, indented, whitespaced, and commented.<br/>
+			✔ All pages validate<br/>
+			✔ The site displays well across all major, modern browsers.<br/>
+			✔ Images are resized so they load fast –do not simply change the width and height to fit them on the screen!<br/>
+			✔ The site displays well on small screens suchas a mobile phone (This is important)<br/>
+			✔ CSS3 is all your own. NO frameworks have been used –Absolutely NO Bootstrap!
+		</div>
+		
+		<h1>Content</h1>
+		<div class = "text">
+			✔ The site has animage of a map that shows the place being described in this site. The place is clearly marked on the image. It is NOT a live Google Map<br/>
+			✔ Sufficiently describes the place with a good amount of quality textual content.<br/>
+			✔ Written so thatsite visitors would really want to visit this place<br/>
+			✔ Appropriate and attractive images are well placed within the text, and sized appropriately.<br/>
+			✔ Images have an appropriate URL link below for reference (if not created by you).<br/>
+			✔ Onepage that documents allof the things you didthat satisfies the grading criteria–called “grade.html”<br/>
+			✔ Site has the required number of pages (10 plus a grading page = 11 (or more))<br/>
+			✔ Spelling and Grammarare excellent<br/>
+			✔ Navigationto the grading page can be placed in the footer.
+		</div>
+		<div class = "path">
+			<a href = "index.shtml">Home</a> > <a href = "grade.shtml">Grade</a>
+		</div>
+	</div>
+	</body>
+</html>

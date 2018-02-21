@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Food</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/proj.css">
+		<!-- Clock Script -->
+		<script>
+		function startTime() {
+			var today = new Date();
+			var h = today.getHours();
+			var m = today.getMinutes();
+			var s = today.getSeconds();
+			m = checkTime(m);
+			s = checkTime(s);
+			document.getElementById('txt').innerHTML =
+			h + ":" + m + ":" + s;
+			var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+			if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+			return i;
+		}
+		</script>
+	</head>
+	<!-- Starts Clock Script and is location for top of webpage -->
+	<body onload = "startTime()">
+	<div class = "clock" id = "txt"></div>
+	<!--#include file = "includes/nav.html" -->
+		<div class = "content">
+			<h1>Food</h1>
+			<div class = "food1">
+				<img src = "images/innout.jpg" alt = "Juicy"></img>
+			</div>
+			<div class = "food2">
+				<img src = "images/tacos.jpg" alt = "Tacos"></img>
+			</div>
+			<div class = "text">
+				San Diego is very unique when it comes to it's diversity of restaraunts and
+				many different styles of food. San Diego is renowned for its very delicious and
+				fattening Mexican food which no Human can resist. Though, When it comes to burgers, there
+				is no doubt you are at least within a 5 mile radius of one of the best burgers you
+				will ever encounter. With the great eats San Diego provides it's hungry locals, you are
+				sure to satisfy your taste-buds wherever you go.<br/>
+				If you'd like to get some mexican food try out <a href = "rubios.shtml">Rubio's</a>.
+				If you're feeling the classic burgers and fries, but not willing to spend a fortune <a href = "inob.shtml">In-N-Out Burger</a> is the way to go.
+				Trying to be more adventorous? Definitely check out a <a href = "obnh.shtml">OB Noodle House</a> for some authentic Vietnamese food.
+			</div>
+			<div class = "path">
+				<a href = "index.shtml">Home</a> > <a href = "food.shtml">Food</a>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Views</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/proj.css">
+		<!-- Clock Script -->
+		<script>
+		function startTime() {
+			var today = new Date();
+			var h = today.getHours();
+			var m = today.getMinutes();
+			var s = today.getSeconds();
+			m = checkTime(m);
+			s = checkTime(s);
+			document.getElementById('txt').innerHTML =
+			h + ":" + m + ":" + s;
+			var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+			if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+			return i;
+		}
+		</script>
+	</head>
+	<!-- Starts Clock Script and is location for top of webpage -->
+	<body onload = "startTime()">
+	<div class = "clock" id = "txt"></div>
+	<!-- SSI for the nav bar -->
+	
+	<!--#include file = "includes/nav.html" -->
+	
+	<!-- Content of the webpage -->
+	<div class = "content">
+		<!-- Title of the current page -->
+		<h1>Views</h1>
+		<!-- Image(s) -->
+		<div class = "home">
+			<img src = "images/image3.JPG" alt = "Torrey Pines"></img>
+		</div>
+		<!-- About the webpage -->
+		<div class = "text">
+			Views are one thing San Diego has an abundance of. All along the Coast, features
+			many hiking locations and nature preserves that are full of great views. One place
+			in particular is the Torrey Pines State Natural Reserve (shown in the above image).
+			Torrey Pines provides outdoor goers adventorous hiking and absolutely gorgeous scenery
+			along the way. If you want the full experience of views in San Diego, The Cabrillo Monument
+			will fulfill those needs by providing the bird's eye view of the Coronado Bay and the San Diego
+			skyline.
+		</div>
+		<!-- Webpage Path -->
+		<div class = "path">
+			<a href = "index.shtml">Home</a> > <a href = "views.shtml">Views</a>
+		</div>
+	</div>
+	</body>
+</html>

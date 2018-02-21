@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Ocean Beach Noodle House</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/proj.css">
+		<!-- Clock Script -->
+		<script>
+		function startTime() {
+			var today = new Date();
+			var h = today.getHours();
+			var m = today.getMinutes();
+			var s = today.getSeconds();
+			m = checkTime(m);
+			s = checkTime(s);
+			document.getElementById('txt').innerHTML =
+			h + ":" + m + ":" + s;
+			var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+			if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+			return i;
+		}
+		</script>
+	</head>
+	<!-- Starts Clock Script and is location for top of webpage -->
+	<body onload = "startTime()">
+	<div class = "clock" id = "txt"></div>
+	<!--#include file = "includes/nav.html" -->
+	<div class = "content">
+		<h1>Ocean Beach Noodle House</h1>
+		<div class = "home">
+			<img src = "images/wings.jpg" alt = "wings"><br/>From: <a href = "http://www.foodnetwork.com/videos/ob-noodles-spicy-garlic-wings-0210761.html">foodnetwork.com</a></img>
+		</div>
+		<div class = "text">
+			Over 10% of the San Diego population is Asian, making the city a hotspot for Asian food and culture.
+			OB Noodle House in Ocean Beach serves the best Vietnamese food in all of San Diego. From Pho to spicy
+			garlic wings (as seen above), their menu is sure to have you begging for more. OB Noodle has been seen on
+			the food network which boosted the customer base by an exponential amount. With the Ocean Beach atmosphere
+			and the delicious food, OB Noodle House is the perfect destination.
+		</div>
+		<a href = "index.shtml">Home</a> > <a href = "food.shtml">Food</a> > <a href = "obnh.shtml">OB Noodle House</a>
+	</div>
+	</body>
+</html>

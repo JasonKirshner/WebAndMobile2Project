@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Rubio's</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/proj.css">
+		<!-- Clock Script -->
+		<script>
+		function startTime() {
+			var today = new Date();
+			var h = today.getHours();
+			var m = today.getMinutes();
+			var s = today.getSeconds();
+			m = checkTime(m);
+			s = checkTime(s);
+			document.getElementById('txt').innerHTML =
+			h + ":" + m + ":" + s;
+			var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+			if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+			return i;
+		}
+		</script>
+	</head>
+	<!-- Starts Clock Script and is location for top of webpage -->
+	<body onload = "startTime()">
+	<div class = "clock" id = "txt"></div>
+	<!--#include file = "includes/nav.html" -->
+	<div class = "content">
+		<h1>Rubios</h1>
+		
+		<div class = "home">
+			<img src = "images/rubios.jpg" alt = "rubios"></img>
+		</div>
+		
+		<div class = "text">
+			Rubio's makes any other Mexican restaraunt look like fools, especially every taco tuesday when their legendary
+			fish taco gets priced at $2 each. Rubio's makes great use of the San Diego fishing areas, creating
+			one of a kind seafood meals such as the Grilled Shrimp Burrito, which can include bacon if you're really
+			trying to get the most out of your burrito. With each dish having a distinct and unique flavor, 
+			they all end up making your day.
+		</div>
+		<div class = "path">
+			<a href = "index.shtml">Home</a> > <a href = "food.shtml">Food</a> > <a href = "rubios.shtml">Rubio's</a>
+		</div>
+	</div>
+	</body>
+</html>
